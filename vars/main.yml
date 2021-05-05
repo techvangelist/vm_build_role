@@ -1,0 +1,85 @@
+---
+# vars file for vm_build---
+vm_location: "/vm_store"
+root_pass: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          39653638366639393838633733363833346333623761653938643533303031666438353632636463
+          6361623732323430323061303163373731653135663339330a623838333464393230303535353030
+          64373331643162653538376661356665313363393633646666313066373335646534373739323763
+          6334646334623035380a356637633236313834316264343365623137333266653139313832373965
+          6230
+
+
+guests:
+#  satellite:
+#    mem: 32768
+#    cpus: 4
+#    os_type: rhel7.8
+#    file_type: qcow2
+#    os_ver: rhel-7.8
+#    size: 100G
+#    ntwk: default
+#  rhel7-lab01:
+#    mem: 2048
+#    cpus: 1
+#    os_type: rhel7.9
+#    file_type: qcow2
+#    os_ver: rhel-7.9
+#    size: 10G
+#    ntwk: br0
+  idm-server:
+    mem: 16384
+    cpus: 3
+    os_type: rhel8.3
+    file_type: qcow2
+    os_ver: rhel-8.3
+    size: 30G
+    ntwk: br0
+  rhel8-lab01:
+    mem: 2048
+    cpus: 2
+    os_type: rhel8.3
+    file_type: qcow2
+    os_ver: rhel-8.3
+    size: 16G
+    ntwk: br0
+  rhel8-lab02:
+    mem: 2048
+    cpus: 2
+    os_type: rhel8.3
+    file_type: qcow2
+    os_ver: rhel-8.3
+    size: 16G
+    ntwk: br0
+  cent7-lab01:
+    mem: 2048
+    cpus: 1
+    os_type: centos7.0
+    file_type: qcow2
+    os_ver: centos-7.8
+    size: 10G
+    ntwk: default
+  cent7-lab02:
+    mem: 2048
+    cpus: 1
+    os_type: centos7.0
+    file_type: qcow2
+    os_ver: centos-7.8
+    size: 10G
+    ntwk: default
+  cent8-lab01:
+    mem: 2048
+    cpus: 1
+    os_type: centos8
+    file_type: qcow2
+    os_ver: centos-8.2
+    size: 10G
+    ntwk: default
+  cent8-lab02:
+    mem: 2048
+    cpus: 1
+    os_type: centos8
+    file_type: qcow2
+    os_ver: centos-8.2
+    size: 10G
+    ntwk: default
